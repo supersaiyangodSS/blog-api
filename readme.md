@@ -62,7 +62,7 @@ Some of the Endpoints are only accessible via admin account.
 recommended tool: [Hoppscotch](https://hoppscotch.io/)
 
 
-#### Create Account
+### Create Account
 
 **username**
 : usernames are case-sensitive
@@ -86,7 +86,7 @@ make a `POST` request to `/user`.
 ```
 
 
-#### Log in
+### Log in
 
 After creating user login using **username** and **password**.
 
@@ -105,7 +105,7 @@ make a `POST` request to `/user/auth`.
 }
 
 
-#### See all users
+### See all users
 
 You can access other user's information like id, first name, last name, username. But other information like email, password cannot be accessed.
 
@@ -121,7 +121,7 @@ make a `GET` request to `/user`.
 ```
 
 
-#### See users info by id
+### See users info by id
 
 Same as all users info but only one user will be shown based upon the id you entered.
 (you can get any user's id by making `GET` request to `/user`)
@@ -138,7 +138,7 @@ make a `GET` request to `/user/enterUserIdHere`.
 ```
 
 
-#### Edit your accounts information
+### Edit your accounts information
 
 You can only edit your own account's information, cannot edit information on other user's account.
 
@@ -157,7 +157,7 @@ make a `PUT` request to `/user/enterUserIdHere`.
 ```
 
 
-#### Delete your account
+### Delete your account
 
 **Admins are authorized to delete user accounts.**
 
@@ -171,7 +171,7 @@ make a `DELETE` request to `/user/enterUserIdHere`.
 ```
 
 
-#### Log out
+### Log out
 
 If you don't log out the user session will automatically expires after one hour.
 
@@ -179,17 +179,17 @@ make a `POST` request to `/user/logout`.
 User will be logged out and redirected to the home page.
 
 
-#### View all blog posts
+### View all blog posts
 
 make a `GET` request to `/post`, here you will be able to see all blog posts.
 
 
-#### View blog post with id
+### View blog post with id
 
 make a `GET` request to `/post/pastePostIdHere`
 
 
-#### Create blog post [ADMIN]
+### Create blog post [ADMIN]
 
 make a `POST` request to `/post`,
 **All given fields are required**
@@ -204,7 +204,7 @@ make a `POST` request to `/post`,
 other info like author of post, post creation or updated time will be filled automatically.
 
 
-#### Edit blog post [ADMIN]
+### Edit blog post [ADMIN]
 
 make a `PUT` request to `/post/pastePostIdHere`,
 **Provide only those properties that you want to update else remove them**
@@ -217,12 +217,12 @@ make a `PUT` request to `/post/pastePostIdHere`,
 other info like author of post, post creation or updated time will be filled automatically.
 
 
-#### Delete blog post [ADMIN]
+### Delete blog post [ADMIN]
 
 make a `DELETE` request to `/post/pastePostIdHere`.
 
 
-#### Create comment on a post
+### Create comment on a post
 
 make a `POST` request to `/post/pastePostIdHere/comments`.
 ```
@@ -232,12 +232,12 @@ make a `POST` request to `/post/pastePostIdHere/comments`.
 ```
 
 
-#### Get comment on a post
+### Get comment on a post
 
 make a `POST` request to `/post/pastePostIdHere/comments`.
 
 
-#### Edit comment on a post
+### Edit comment on a post
 
 make a `PUT` request to `/post/pastePostIdHere/pasteCommentIdHere`.
 ```
@@ -247,12 +247,12 @@ make a `PUT` request to `/post/pastePostIdHere/pasteCommentIdHere`.
 ```
 
 
-#### Delete comment on a post [USER AND ADMIN]
+### Delete comment on a post [USER AND ADMIN]
 
 make a `DELETE` request to `/post/pastePostIdHere/paseCommentIdHere`.
 
 
-#### Like the post
+### Like the post
 
 make a `PUT` request to `/post/pastePostIdHere/like`.
 **If you are already liked the post and visiting this endpoint it will unlike the post and vice-versa**
