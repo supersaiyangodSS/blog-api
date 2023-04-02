@@ -22,7 +22,7 @@ const checkAuth = (req, res, next) => {
 
 router.get("/", checkAuth, getUserControl);
 
-router.post("/", checkAuth, createUserControl);
+router.post("/", createUserControl);
 
 router.get("/:id", checkAuth, getOneUserControl);
 
