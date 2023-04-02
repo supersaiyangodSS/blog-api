@@ -4,6 +4,7 @@ A blog API with role based authorization and authentication allows you to access
 
 # [live demo](https://blog-api.vedantsapalkar.repl.co)
 
+
 ## Features
 
 - User authentication and authorization
@@ -17,6 +18,7 @@ A blog API with role based authorization and authentication allows you to access
 - Scalability and performance optimizations
 - Secured API
 
+
 ## Installation
 1. Clone the repository
 2. Install dependencies using `npm install`
@@ -26,10 +28,12 @@ A blog API with role based authorization and authentication allows you to access
     - `PORT` - the port number the server will listen on
 4. Start the server using npm start
 
+
 ## Endpoints
 
 The following API endpoints are available:
 Some of the Endpoints are only accessible via admin account.
+
 
 ### User:
 - GET /user - Get all users (requires authentication)
@@ -39,6 +43,7 @@ Some of the Endpoints are only accessible via admin account.
 - DELETE /user/:id Delete user (requires authentication)
 - POST /user/auth - User login
 - POST /user/logout - User logout
+
 
 
 ### Posts:
@@ -51,9 +56,11 @@ Some of the Endpoints are only accessible via admin account.
 - POST /post/:post/comments - Add a comment to a post (requires authentication)
 - GET /post/:post/comments - Get all comments for a post
 
+
 ## Getting Started:
 
 recommended tool: [Hoppscotch](https://hoppscotch.io/)
+
 
 #### Create Account
 
@@ -78,6 +85,7 @@ make a `POST` request to `/user`.
 }
 ```
 
+
 #### Log in
 
 After creating user login using **username** and **password**.
@@ -96,6 +104,7 @@ make a `POST` request to `/user/auth`.
   "message": "Logged in successfull, Hello yourusername"
 }
 
+
 #### See all users
 
 You can access other user's information like id, first name, last name, username. But other information like email, password cannot be accessed.
@@ -110,6 +119,7 @@ make a `GET` request to `/user`.
     "username": "username"
 }
 ```
+
 
 #### See users info by id
 
@@ -126,6 +136,7 @@ make a `GET` request to `/user/enterUserIdHere`.
     "username": "username"
 }
 ```
+
 
 #### Edit your accounts information
 
@@ -145,6 +156,7 @@ make a `PUT` request to `/user/enterUserIdHere`.
 }
 ```
 
+
 #### Delete your account
 
 **Admins are authorized to delete user accounts.**
@@ -158,6 +170,7 @@ make a `DELETE` request to `/user/enterUserIdHere`.
 }
 ```
 
+
 #### Log out
 
 If you don't log out the user session will automatically expires after one hour.
@@ -165,13 +178,16 @@ If you don't log out the user session will automatically expires after one hour.
 make a `POST` request to `/user/logout`.
 User will be logged out and redirected to the home page.
 
+
 #### View all blog posts
 
 make a `GET` request to `/post`, here you will be able to see all blog posts.
 
+
 #### View blog post with id
 
 make a `GET` request to `/post/pastePostIdHere`
+
 
 #### Create blog post [ADMIN]
 
@@ -187,6 +203,7 @@ make a `POST` request to `/post`,
 ```
 other info like author of post, post creation or updated time will be filled automatically.
 
+
 #### Edit blog post [ADMIN]
 
 make a `PUT` request to `/post/pastePostIdHere`,
@@ -199,9 +216,11 @@ make a `PUT` request to `/post/pastePostIdHere`,
 ```
 other info like author of post, post creation or updated time will be filled automatically.
 
+
 #### Delete blog post [ADMIN]
 
 make a `DELETE` request to `/post/pastePostIdHere`.
+
 
 #### Create comment on a post
 
@@ -212,9 +231,11 @@ make a `POST` request to `/post/pastePostIdHere/comments`.
 }
 ```
 
+
 #### Get comment on a post
 
 make a `POST` request to `/post/pastePostIdHere/comments`.
+
 
 #### Edit comment on a post
 
@@ -225,14 +246,17 @@ make a `PUT` request to `/post/pastePostIdHere/pasteCommentIdHere`.
 }
 ```
 
+
 #### Delete comment on a post [USER AND ADMIN]
 
 make a `DELETE` request to `/post/pastePostIdHere/paseCommentIdHere`.
+
 
 #### Like the post
 
 make a `PUT` request to `/post/pastePostIdHere/like`.
 **If you are already liked the post and visiting this endpoint it will unlike the post and vice-versa**
+
 
 ## Contributing
 Contributions are always welcome! If you'd like to contribute to this project, please follow these steps:
@@ -244,6 +268,7 @@ Contributions are always welcome! If you'd like to contribute to this project, p
 - Submit a pull request
 - Please make sure to write clear and concise commit messages and follow the project's coding conventions.
 
+
 ## Error Handling
 Errors are handled by returning a JSON response with an error message and an HTTP status code. The following status codes are used:
 
@@ -254,6 +279,7 @@ Errors are handled by returning a JSON response with an error message and an HTT
 - 403 - Forbidden
 - 404 - Not Found
 - 500 - Internal Server Error
+
 
 ## License
 This project is licensed under the [MIT License.](https://github.com/vedant8177/blog-api/blob/main/LICENSE)
