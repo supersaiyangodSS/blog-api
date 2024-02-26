@@ -2,7 +2,7 @@
 
 A blog API with role based authorization and authentication allows you to access, create, update, delete posts, post comments & more. made using node.js, express and mongodb.
 
-# [live demo](https://blog-api.vedantsapalkar.repl.co)
+# [live demo](https://blog-api-vedant.glitch.me/)
 
 
 ## Features
