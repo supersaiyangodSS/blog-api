@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "ES2015",
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "allowJs": true,
+    "baseUrl": "./src",
+    "typeRoots": ["./src/types", "./node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "useUnknownInCatchVariables": false,
+    "esModuleInterop": true,
+    "removeComments": false    
+  },
+  "include": ["src/**/*.ts"],
+}
