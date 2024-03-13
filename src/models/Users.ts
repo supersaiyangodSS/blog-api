@@ -1,5 +1,5 @@
+import { Schema, model } from "mongoose";
 import { IUser } from "../interfaces/UserInterface.js";
-import mongoose, { Schema } from "mongoose";
 
 const userSchema = new Schema<IUser>({
     firstName: {
@@ -49,6 +49,6 @@ userSchema.pre<IUser>('save', function (next) {
     next();
 });
 
-const User = mongoose.model<IUser>('User', userSchema);
+const User = model<IUser>('User', userSchema);
 
 export default User;
