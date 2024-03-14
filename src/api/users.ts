@@ -1,6 +1,5 @@
 import { NextFunction, Request, Response, Router } from 'express';
 
-
 import {
   getUserControl,
   createUserControl,
@@ -39,7 +38,7 @@ router.post("/logout", logout);
 router.get("*", notFound);
 
 router.use((err: Error, req: Request, res: Response, next: NextFunction) => {
-  if (err instanceof UnauthorizedError) {
+  if (err) {
     return res.status(401).json({ message: "Unauthorized User!" });
   }
   next();
