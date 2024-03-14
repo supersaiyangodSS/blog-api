@@ -10,9 +10,11 @@ export interface IPost extends Document {
     publishedAt: Date,
     isPublished: boolean,
     views: number,
-    likes: number[],
+    likes: number,
     likedBy: string[],
     comments: Array<{
+        _id: string,
+        author: string,
         text: string,
         role: string,
         createdTime: Date,

@@ -37,13 +37,16 @@ const postSchema = new Schema<IPost>({
     default: 0,
   },
   likes: {
-    type: [Number],
+    type: Number,
   },
   likedBy: {
     type: [String]
   },
   comments: [
     {
+      _id: {
+        type: String
+      },
       text: { type: String,
               required: true 
             },
