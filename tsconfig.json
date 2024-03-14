@@ -10,7 +10,6 @@
     "strict": true,
     "allowJs": true,
     "baseUrl": "./src",
-    "typeRoots": ["./src/types", "./node_modules/@types"],
     "allowSyntheticDefaultImports": true,
     "useUnknownInCatchVariables": false,
     "esModuleInterop": true,
